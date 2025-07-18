@@ -79,6 +79,8 @@ Rails.application.routes.draw do
         get 'advisor_engine_config', to: 'advisor_engine_config#show'
       end
 
+      get 'iop/meta/v1/cvemap.xml', to: 'iop#cvemap'
+
       namespace 'advisor_engine' do
         get 'host_details', to: 'advisor_engine#host_details'
         patch 'upload_hits', to: 'advisor_engine#upload_hits'
